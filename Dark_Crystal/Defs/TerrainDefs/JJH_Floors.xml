@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <TerrainDef ParentName="FloorBase">
+        <defName>JJH_MudFloor</defName>
+        <label>smooth mud floor</label>
+        <renderPrecedence>250</renderPrecedence>
+        <description>Pretty, smooth hardened mud floor that retains heat and is easy to make.</description>
+        <texturePath>Terrain/Surfaces/PackedDirt</texturePath>
+        <!--<burnedDef>BurnedMudFloor</burnedDef>-->
+        <color>(150,138,142)</color>
+        <statBases>
+            <WorkToBuild>65</WorkToBuild>
+            <Flammability>0</Flammability>
+        </statBases>
+        <!--<costList>
+            <Thing>4</Thing>
+        </costList>-->
+        <constructEffect>ConstructDirt</constructEffect>
+        <designationHotKey>Misc8</designationHotKey>
+    </TerrainDef>
+    
+</Defs>

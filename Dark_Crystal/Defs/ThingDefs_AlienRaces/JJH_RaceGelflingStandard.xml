@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--This is a comment -->
+<!--XML File for generic Gelfling, following the Alien Races Framework tutorial -->
+<Defs>
+    <!--Framework to work from with a parent class of BasePawn -->
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <!--Race name-->
+        <defName>JJH_GelflingStandardRace</defName>
+        <!--Quick description -->
+        <label>Gelfling</label>
+        <!--Long Description -->
+        <description>Kind, gentle, naive race that enjoys music and food</description>
+        <!--Descriptive properties of the race-->
+        <alienRace>
+            <!--Basic Properties -->
+            <generalSettings>
+                <!--Probability of male Gelfling occurance -->
+                <maleGenderProbability>0.45</maleGenderProbability>
+                
+                <!--Allow backstories not specific to Gelfling-->
+                <!--<useOnlyPawnkindBackstories>true</useOnlyPawnkindBackstories>-->
+                
+                <!--Provide immunity to ailment-->
+                <immuneToAge>false</immuneToAge>
+                
+                <!--Prevent race from sleeping laying down-->
+                <canLayDown>true</canLayDown>
+                
+                <!--Provide a list of valid beds Gelfling can sleep on-->
+                <!--<validBeds>
+                    <li>Bed</li>
+                    <li>GrassPatch</li>
+                </validBeds>-->
+
+                <!--Special effects when drugs are taken-->
+                <!--<chemicalSettings>
+                    <li>
+                        <chemical>Smokeleaf</chemical>
+                        <reactions>
+                            <li Class="ingestionOutcomeDoer_GiveHediff">
+                                <hediff>LungFailure</hediff>
+                                <severity>0.75</severity>
+                            </li>
+                        </reactions>
+                    </li>
+                    <li>
+                        <chemical>Luciferium</chemical>
+                        <ingestible>false</ingestible>
+                    </li>
+                </chemicalSettings>-->
+                
+                <!--Forced traits onto the Gelfling race -->
+                <!--<forcedRaceTraitEntries>
+                    <li>
+                        <defName>NaturalMood</defName>
+                        <degree>2</degree>
+                        <!-Base chance->
+                        <chance>50</chance>
+                        <!-Second chance, meaning a .5 * .5 = .25 chance of males having a NaturalMood->
+                        <commonalityMale>50</commonalityMale>
+                        <!-Second chance, meaning a .5 * .2 = .1 chance of males having a NaturalMood->
+                        <commonalityFemale>20</commonalityFemale>
+                    </li>
+                </forcedRaceTraitEntries>-->
+
+                <!--List of traits no Gelfling can have-->
+                <disallowedTraits>
+                    <li>Cannibal</li>
+                    <li>Transhumanist</li>
+                </disallowedTraits>
+                
+                <!--Alignments towards particular factions-->
+                <!--<factionRelations>
+                    <li>
+                        <factions>
+                            <li>Podlings</li>
+                        </factions>
+                        <goodwill>
+                            <min>-100</min>
+                            <max>100</max>
+                        </goodwill>
+                    </li>
+                </factionRelations>-->
+                
+                <!--Limit damage done during social fights-->
+                <maxDamageForSocialfight>1</maxDamageForSocialfight>
+                
+                <!--Allow human backstories -->
+                <allowHumanBios>true</allowHumanBios>
+
+                <!--Allow race to be target of xenophobia-->
+                <immuneToXenophobia>false</immuneToXenophobia>
+                <!--Allow race to be target of xenophilia-->
+                <!--<immuneToXenophilia>false</immuneToXenophilia>-->
+                
+                <!--List of races Gelfling can not be xenophobist towards-->
+                <!--<notXenophobistTowards>
+                    <li>NoOne</li>
+                </notXenophobistTowards>-->
+
+                <!--"If your race wants to import the human recipes, set 
+                humanRecipeImport to true. It does a basic check if there 
+                are any valid bodyparts in the body of your race before it 
+                imports."-->
+                <humanRecipeImport>true</humanRecipeImport>
+
+                <!--Aid to the graphic paths -->
+                <alienPartGenerator>
+                    <!--Headpath search list, adds variety of head shapes -->
+                    <aliencrowntypes>
+                        <!--<li>Narrow_Pointy</li>-->
+                        <li>Male_Average_Pointy</li>
+                        <li>Male_Narrow_Pointy</li>
+                        <li>Female_Average_Pointy</li>
+                        <li>Female_Narrow_Pointy</li>
+                    </aliencrowntypes>
+
+                    <!--Allow types of body-->
+                    <alienbodytypes>
+                        <li>Thin</li>
+                    </alienbodytypes>
+
+                    <!--Seperate paths of head/body growth as Gelfling age -->
+                    <useGenderedHeads>false</useGenderedHeads>
+                    <useGenderedBodies>false</useGenderedBodies>
+
+                    <!--Auto generate skin and hair color -->
+                    <alienskincolorgen Class="ColorGenerator_Options">
+                        <options>
+                            <!--Deet/Grottan -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.42,0.47,0.37,1)</only>
+                            </li>
+                            <!--Rian/Stone-Wood -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.97,0.73,0.44,1)</only>
+                            </li>
+                            <!--Brea/Vapra -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.38,0.32,0.3,1)</only>
+                            </li>
+                            <!--Jen/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            -->
+                            <!--Naia/Drenchen -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.5,0.5,0.31,1)</only>
+                            </li>
+                            <!--Deet/Grottan 2 -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.26,0.25,0.18,1)</only>
+                            </li>
+                            <!--Rian/Stone-Wood 2 -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.57,0.38,0.35,1)</only>
+                            </li>
+                            <!--Brea/Vapra 2 -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.45,0.36,0.35,1)</only>
+                            </li>
+                            <!--Jen/Stone-Wood 2 ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 2 
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            -->
+                            <!--Naia/Drenchen 2 -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.59,0.56,0.39,1)</only>
+                            </li>
+                        </options>
+                    </alienskincolorgen>
+                    <!--<ailenskinsecondcolorgen Class="ColorGenerator_Options">
+                        <options>
+                            <!-Deet/Grottan ->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.26,0.25,0.18,1)</only>
+                            </li>
+                            <!-Rian/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.57,0.38,0.35,1)</only>
+                            </li>
+                            <!-Brea/Vapra ->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.45,0.36,0.35,1)</only>
+                            </li>
+                            <!-Jen/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            ->
+                            <!-Naia/Drenchen ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.59,0.56,0.39,1)</only>
+                            </li>
+                        </options>
+
+                    </ailenskinsecondcolorgen>-->
+                    <alienhaircolorgen Class="ColorGenerator_Options">
+                        <options>
+                            <!--Deet/Grottan -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.42,0.44,0.35,1)</only>
+                            </li>
+                            <!--Rian/Stone-Wood -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.42,0.22,0.12,1)</only>
+                            </li>
+                            <!--Brea/Vapra -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.61,0.54,0.55,1)</only>
+                            </li>
+                            <!--Jen/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            -->
+                            <!--Naia/Drenchen -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.11,0.38,0.38,1)</only>
+                            </li>
+                            <!--Deet/Grottan 2 -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.66,0.66,0.59,1)</only>
+                            </li>
+                            <!--Rian/Stone-Wood 2 -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.09,0.13,0.16,1)</only>
+                            </li>
+                            <!--Brea/Vapra 2 -->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.33,0.24,0.22,1)</only>
+                            </li>
+                            <!--Jen/Stone-Wood 2 ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 2
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            -->
+                            <!--Naia/Drenchen 2 -->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.03,0.03,0.04,1)</only>
+                            </li>
+                        </options>
+
+                    </alienhaircolorgen>
+                    <!--<alienhairsecondcolorgen Class="ColorGenerator_Options">
+                        <options>
+                            <!-Deet/Grottan ->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.66,0.66,0.59,1)</only>
+                            </li>
+                            <!-Rian/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.09,0.13,0.16,1)</only>
+                            </li>
+                            <!-Brea/Vapra ->
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(0.33,0.24,0.22,1)</only>
+                            </li>
+                            <!-Jen/Stone-Wood ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            <!-Kira/Grottan 
+                            <li>
+                                <weight>5</weight>
+                                <only>RGBA(1.0,1.0,1.0,1)</only>
+                            </li>
+                            ->
+                            <!-Naia/Drenchen ->
+                            <li>
+                                <weight>10</weight>
+                                <only>RGBA(0.03,0.03,0.04,1)</only>
+                            </li>
+                        </options>
+
+                    </alienhairsecondcolorgen>-->
+
+                    <!--keep hair color same as skin -->
+                    <useSkincolorForHair>false</useSkincolorForHair>
+
+                    <!--custom sizing for the body, default is (1,1) -->
+                    <customDrawSize>(0.6,0.6)</customDrawSize>
+                    <!--custom sizing for the head, default is (1,1) -->
+                    <customHeadDrawSize>(0.65,0.65)</customHeadDrawSize>
+                    <!--custom sizing for the body portrait, default is (1,1) -->
+                    <customPortraitDrawSize>(1.2,1.2)</customPortraitDrawSize>
+                    <!--custom sizing for the head portrait, default is (1,1) -->
+                    <customPortraitHeadDrawSize>(1.15,1.15)</customPortraitHeadDrawSize>
+
+                    <!--Offset for the head -->
+                    <headOffset>(0.00, -0.15)</headOffset>
+
+                    <!--If there is a specific head part, add here -->
+                    <!--<headBodyPartDef>AlienHead</headBodyPartDef>-->
+
+                    <!--Add additional "hediff"s, textures that add a purpose -->
+                    <bodyAddons>
+                        <li>
+                            <!--Path of the image for the addon -->
+                            <path>Things/Pawns/Ears/Ears</path>
+                            
+                            <!--attach texture(above) to pawn body, in case 
+                            part is missing and it should not appear -->
+                            <bodyPart>Head</bodyPart>
+
+                            <!--Determine the orientation of the body part -->
+                            <inFrontOfBody>true</inFrontOfBody>
+                            
+                            <!--"For more precise aligning" -->
+                            <layerOffset>0.02</layerOffset>
+                            
+                            <!--Angle the bodypart -->
+                            <angle>0</angle>
+                            
+                            <!--For visibility when laying in bed -->
+                            <drawnInBed>true</drawnInBed>
+                            
+                            <!--determine if the bodypart uses the skin color 
+                            or the hair color -->
+                            <useSkinColor>true</useSkinColor>
+                            
+                            <!--Use variants, with multiple bodyparts, of the
+                            previous index of this list, should not be used
+                            on first item in list -->
+                            <!--<linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>-->
+                            
+                            <!--Variants of the bodypart based on hediff -->
+                            <hediffGraphics>
+                                <!--<BionicEar>Things/Ears/EarBionic<BionicEar>
+                                <BionicSuperEar>Things/Ears/EarSuperBionic</BionicSuperEar>-->
+                            </hediffGraphics>
+                            
+
+                            <!--Backstory dependent graphics -->
+                            <!--<backstoryGraphics>
+                                <Orphan>Things/Ears/EarsOrphan</Orphan>
+                            </backstoryGraphics>-->
+                            
+                            <!--Add specific offsets for each direction, body then crown -->
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(-0.42,0.5)</Thin>
+                                    </bodyTypes>
+                                    <portraitBodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(-0.4,0.5)</Thin>
+                                    </portraitBodyTypes>
+                                    <crownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </crownTypes>
+                                    <portraitCrownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </portraitCrownTypes>
+                                </south>
+                                <north>
+                                    <bodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(0,0.8)</Thin>
+                                    </bodyTypes>
+                                    <portraitBodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(0,0.8)</Thin>
+                                    </portraitBodyTypes>
+                                    <crownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </crownTypes>
+                                    <portraitCrownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </portraitCrownTypes>
+
+                                </north>
+                                <east>
+                                    <bodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(-0.525,0.5)</Thin>
+                                    </bodyTypes>
+                                    <portraitBodyTypes>
+                                        <!--I think this is for male average body type -->
+                                        <!--<Male>(0.5,0.22)</Male>
+                                        <!-I think this is for female average body type ->
+                                        <Female>(0.5,0.22)</Female>
+                                        <Fat>(0.5,0.22)</Fat>-->
+                                        <Thin>(-0.525,0.5)</Thin>
+                                    </portraitBodyTypes>
+                                    <crownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </crownTypes>
+                                    <portraitCrownTypes>
+                                        <Male_Average_Pointy>(0,0)</Male_Average_Pointy>
+                                        <Male_Narrow_Pointy>(0,0)</Male_Narrow_Pointy>
+                                        <Female_Average_Pointy>(0,0)</Female_Average_Pointy>
+                                        <Female_Narrow_Pointy>(0,0)</Female_Narrow_Pointy>
+                                    </portraitCrownTypes>
+
+                                </east>
+                            </offsets>
+
+                            <!--can add requirement of backstory for part to even exist -->
+                            <!--<backstoryRequirement>Orphan</backstoryRequirement>-->
+
+                            <!--Can change shader type for bodypart, default is Cutout -->
+                            <!--<shaderType>Transparent</shaderType>-->
+
+                            <!--Can hide appearance when wearing specific clothing -->
+                            <!--<hiddenUnderApparelTag>
+                                <li>HideThisShit</li>
+                            </hiddenUnderApparelTag>
+                            <hiddenUnderApparelFor>
+                                <li>FullHead</li>
+                            </hiddenUnderApparelFor>-->
+
+                        </li>
+                    </bodyAddons>
+
+
+                </alienPartGenerator>
+                
+
+                
+            </generalSettings>
+            <!--A list of paths for different stages of life -->
+            <graphicPaths>
+                <!--Leaving some, but not all, fields out makes the
+                pawn without that part. Without all fields, default
+                to human.
+                With "<body>TestPawn/Base/</body>", will search for
+                "TestPawn/Base/Naked_" + BodyType + "_" + [south/east/north/west]
+                and with "<head>TestPawn/head/</head>", will search for
+                "TestPawn/Head/" + gender + crownType + "_" + [south/east/north/west] -->
+                <li>
+                    <head>Things/Pawns/Heads/</head>
+                <!--
+                    <body>GelflingPawn/Base/<body>
+                    <skeleton>GelflingPawn/Dessicated/<skeleton>
+                    <skull>GelflingPawn/Skull/<skull>
+                -->
+                </li>
+                <!--For each lifeStage, can define different paths for graphics -->
+                <!--<li>
+                    <lifeStageDefs>
+                        <li>HumanlikeAdult</li>
+                    </lifeStageDefs>
+                    <body>GelflingPawn/BaseAdult/<body>
+                    <head>GelflingPawn/HeadAdult/<head>
+                    <skeleton>GelflingPawn/Dessicated/<skeleton>
+                    <skull>GelflingPawn/Skull/<skull>
+                    
+                </li>-->
+            </graphicPaths>
+
+            <hairSettings>
+                <!--State if the race has hair -->
+                <hasHair>true</hasHair>
+
+                <!--State when the race gets grey hair -->
+                <getsGreyAt>65</getsGreyAt>
+                
+                <!--List the tags for the HairDefs if race has specific hairs -->
+                <!--<hairTags>
+                    <li>LongStraight</li>
+                </hairTags>
+
+                ???<shader>Cutout</shader>
+                -->
+
+                
+            </hairSettings>
+
+
+            <!--Inject gelfling into other factions meaningfully -->
+            <!--<pawnKindSettings>
+                
+                
+
+            </pawnKindSettings>-->
+            
+            <thoughtSettings>
+                <!--Replacec thoughts with a different label -->
+                <replacerList>
+                    <li>
+                        <original>PsychicSoothe</original>
+                        <replacer>EnjoyingNaturesSong</replacer>
+                    </li>
+                </replacerList>
+
+                <!--List thoughts race cannot receive -->
+                <cannotReceiveThoughts>
+                    <li>AteRawFood</li>
+                </cannotReceiveThoughts>
+
+                <!--If race cannot think at all -->
+                <!--<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll> -->
+
+                <!--If the above is activated, whitelist for
+                thoughts still available -->
+                <!--<canStillReceiveThoughts>
+                    <li>Pain</li>
+                </canStillReceiveThoughts>-->
+                
+                <!--Thoughts that happen when a butcher occurs,
+                ie butchered humanlike -->
+                <butcherThoughtSpecific>
+                    <li>
+                        <!--Races that force thought to occur
+                        when butchered -->
+                        <raceList>
+                            <!--Humanlike -->
+                            <li>Human</li>
+                        </raceList>
+                        <!--Thought that applies to the butcher -->
+                        <thought>BucheredHuman</thought>
+                        <!--Thought that applies to the colonist that did not
+                        participate in the butchering -->
+                        <knowThought>KnowButcherHuman</knowThought>
+                    </li>
+                </butcherThoughtSpecific>
+                
+                <!--Thoughts that happen when eating some specific food -->
+                <ateThoughtSpecific>
+                    <li>
+                        <!--Races that force thought when eaten -->
+                        <raceList>
+                            <!--Humanlike -->
+                            <li>Human</li>
+                        </raceList>
+                        <!--Thought that applies when eating directly -->
+                        <thought>AteHumanlikeMeatDirect</thought>
+                        <!--Thought that applies eating as an ingredient-->
+                        <ingredientThought>AteHumanIngredient</ingredientThought>
+                    </li>
+                </ateThoughtSpecific>
+
+                
+            </thoughtSettings>
+            
+            <relationSettings>
+                <!--Multiplier chances for the occurance of some type of relation -->
+                <relationChanceModifierLover>2</relationChanceModifierLover>
+                <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+                <relationChanceModifierFiance>2</relationChanceModifierFiance>
+                <!--<relationChanceModifierSpouce>2</relationChanceModifierSpouce>-->
+                <!--<relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>-->
+
+                <relationChanceModifierParent>3</relationChanceModifierParent>
+                <relationChanceModifierChild>4</relationChanceModifierChild>
+                <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+                <!--for relabeling relationship labels -->
+                <renamer>
+                    <li>
+                        <relation>Parent</relation>
+                        <label>Father</label>
+                        <femaleLabel>Maudra</femaleLabel>
+                    </li>
+                    <li>
+                        <relation>Child</relation>
+                        <label>Maudren</label>
+                        <femaleLabel>Maudren</femaleLabel>
+                    </li>
+                </renamer>
+
+            </relationSettings>
+            
+            <raceRestriction>
+                <!--Define research requirements such as race specific projects,
+                necessary apparel for research-->
+                <!--<researchList>
+                    <li>
+                        <projects>
+                            <li>VliyayaAtire</li>
+                        </projects>
+                        <apparelList>
+                            <li>Apparel_HotPants</li>
+                        </apparelList>
+                    </li>
+                </researchList>-->
+
+                <!--List of aspects that are race specific -->
+               <!-- <apparelList>
+                    <li>JJH_Apparel_VliyayaAtire</li>
+                </apparelList>
+
+                <weaponList>
+                    <li>JJH_Weapon_Bola</li>
+                </weaponList>
+
+                <recipeList>
+                    <li>JJH_Weapon_Bola</li>
+                </recipeList>
+
+                <traitList>
+                    <li>Vliyaya_Healing</li>
+                    <li>Vliyaya_DreamEtching</li>
+                    <li>DreamFast</li>
+                </traitList>
+
+                <foodList>
+                    <li>JJH_CritterMeal</li>
+                </foodList>
+
+                <buildingList>
+                    <li>JJH_DreamEtch</li>
+                </buildingList>
+
+                <plantList>
+                    <li>JJH_HealMoss</li>
+                </plantList>-->
+                
+                <!--can restrict race to the lists above -->
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+                <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+                <!--<onlyUseRaceRestrictedRecipes>false</onlyUseRaceRestrictedRecipes>-->
+                <!--<onlyUseRaceRestrictedTraits>false</onlyUseRaceRestrictedTraits>-->
+                <!--<onlyUseRaceRestrictedFood>false</onlyUseRaceRestrictedFood>
+                <onlyUseRaceRestrictedBuildings>false</onlyUseRaceRestrictedBuildings>
+                <onlyUseRaceRestrictedPlants>false</onlyUseRaceRestrictedPlants>-->
+
+                <!--Not sure, triggered when member of race exists in colony -->
+                <!--<conceptList>
+                    <li>GelflingConcept</li>
+                </conceptList>
+
+                <workGiverList>
+                    <li>GelflingWorkGiver</li>
+                </workGiverList>-->
+                <!--can whitelist vanilla aspects if only using restricted aspects -->
+                <!--<whiteApparalList>
+                    <li>Apparel_VliyayaAtire</li>
+                </whiteApparelList>
+
+                <whiteWeaponList>
+                    <li>Weapon_Bola</li>
+                </whiteWeaponList>
+
+                <whiteRecipeList>
+                    <li>Weapon_Bola</li>
+                </whiteRecipeList>
+
+                <whiteTraitList>
+                    <li>Vliyaya_Healing</li>
+                    <li>Vliyaya_DreamEtching</li>
+                    <li>DreamFast</li>
+                </whiteTraitList>
+
+                <whiteFoodList>
+                    <li>CritterMeal</li>
+                </whiteFoodList>-->
+
+
+            </raceRestriction>
+
+            <!--Extend race with mod -->
+            <!--<modExtensions>
+                <li Class="AlienRace.Info">
+                    <usePawnKindBackstories>false</usePawnKindBackstories>
+                    <allowHumanBios>true</allowHumanBios>
+                    <maleGenderProbability>0.5</maleGenderProbability>
+                <li>
+            </modExtensions>--> 
+
+            <!--Allow different bodies at different lifestages, including
+            a reference to a framework and body -->
+            <!--<li Class="AlienRace.LifeStageAgeAlien">
+                <def>GelflingAdult</def>
+                <minAge>13</minAge>
+                <body>GelflingAdultBody</body>
+            </li>-->
+            
+            <!--From AlienRace_Androids.xml -->
+            
+
+        </alienRace>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <MoveSpeed>4.2</MoveSpeed>
+            <Flammability>1.0</Flammability>
+            <ComfyTemperatureMin>-2</ComfyTemperatureMin>
+            <ComfyTemperatureMax>45</ComfyTemperatureMax>
+            <ToxicSensitivity>0.75</ToxicSensitivity>
+            <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+            <LeatherAmount>17</LeatherAmount>
+            <Mass>60</Mass>
+        </statBases>
+
+        <tools>
+            <li>
+                <label>right fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>1.3</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>20</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+                
+            </li>
+            <li>
+                <label>left fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>1.3</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>20</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+
+            </li>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.1</chanceFactor>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>1.8</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+
+        <race>
+            <!--<nameGenerator>JJH_GelflingMaleNamer</nameGenerator>
+            <nameGeneratorFemale>JJH_GelflingFemaleNamer</nameGeneratorFemale>-->
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>120</lifeExpectancy>
+            <baseHungerRate>0.6</baseHungerRate>
+            <leatherDef>Leather_JJHGelfling</leatherDef>
+            <nameCategory>HumanStandard</nameCategory>
+            <body>Human</body>
+            <!--<bloodDef>JJHFilthGelflingEssense</bloodDef>-->
+            <!--<deathActionWorkerClass>-->
+            <baseBodySize>0.65</baseBodySize>
+            <baseHealthScale>2</baseHealthScale>
+            <foodType>OmnivoreHuman</foodType>
+            <gestationPeriodDays>30</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.5,0)</li>
+                    <li>(1,1)</li>
+                    <li>(1.01,0.02)</li>
+                    <li>(3.5,0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeStageAges>
+                <li>
+                    <def>HumanlikeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeToddler</def>
+                    <minAge>1.2</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeChild</def>
+                    <minAge>4</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeTeenager</def>
+                    <minAge>13</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeAdult</def>
+                    <minAge>16</minAge>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            <specialShadowData>
+                <volume>(0.3,0.8,0.4)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </specialShadowData>
+            <ageGenerationCurve>
+                <points>
+                    <li>(14,0)</li>
+                    <li>(16,100)</li>
+                    <li>(50,100)</li>
+                    <li>(60,30)</li>
+                    <li>(70,18)</li>
+                    <li>(80,10)</li>
+                    <li>(90,3)</li>
+                    <li>(100,0)</li>
+                </points>
+            </ageGenerationCurve>
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+                <li>Human</li>
+            </hediffGiverSets>
+
+        </race>
+    </AlienRace.ThingDef_AlienRace>
+
+    
+    <!--Link child/adult-hood backstories with gender and name -->
+    <AlienRace.PawnBioDef>
+        <defName>JJH_BackstoryEldestMaudraDaughter</defName>
+        <childhoodDef>JJH_BackstoryClanMaudraChild</childhoodDef>
+        <adulthoodDef>JJH_BackstoryClanMaudra</adulthoodDef>
+        <gender>Female</gender> <!--Could be "Male" or "Either" also -->
+        <name>
+            <first>Naia</first>
+            <last>Drenchen</last>
+            <nick>Naia</nick>
+        </name>
+        <factionLeader>true</factionLeader>
+        <validRaces>
+            <li>JJH_GelflingStandardRace</li>
+        </validRaces>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+    </AlienRace.PawnBioDef>
+
+
+    <AlienRace.RaceSettings>
+        <defName>GelflingSettings</defName>
+        <!--Connect race specific backstories to vanilla backstories-->
+        <pawnKindSettings>
+            <!--<backstoryTagInsertion>
+                <li>
+                    <backstories>
+                        <li>Clone-Farmed</li>
+                    </backstories>
+                    <spawnCategories>
+                        <li>JJH_WarriorChild</li>
+                    </spawnCategories>
+                </li>
+            </backstoryTagInsertion>-->
+
+            <alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>JJH_GelflingKindVillager</li>
+                        <!--<li>JJH_GelflingKindGuard</li>-->
+                    </kindDefs>
+                    <chance>10.0</chance>
+                </li>
+            </alienslavekinds>
+
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+                        <li>JJH_GelflingKindVillager</li>
+                        <!--<li>JJH_GelflingKindGuard</li>-->
+                    </kindDefs>
+                    <chance>10.0</chance>
+                </li>
+                <li>
+                    <kindDefs>
+                        <li>JJH_GelflingKindVillager</li>
+                        <!--<li>JJH_GelflingKindAllMaudra</li>-->
+                     </kindDefs>
+                    <chance>0.5</chance>
+                </li>
+            </alienrefugeekinds>
+
+            <!--Set types of gelfling generated during initial preperation -->
+            <startingColonists>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>JJH_ClanMaudraChild</li>
+                                <li>JJH_BackstoryGelfling</li>
+                            </kindDefs>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>PlayerColony</li>
+                    </factionDefs>
+                </li>
+            </startingColonists>
+
+            <!--Set typees of gelfling that will wander into colony -->
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>JJH_FreeSpirit</li>
+                            </kindDefs>
+                            <chance>10.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>PlayerColony</li>
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+        </pawnKindSettings>
+    </AlienRace.RaceSettings>
+    
+    <ThingDef ParentName="LeatherBase">
+        <defName>Leather_JJHGelfling</defName>
+        <label>gelfling leather</label>
+        <description>Tanned and dried skin of a gelfling, too thin to be useful for high quality fabrication</description>
+        <graphicData>  
+            <color>(248,186,112)</color>
+            <colorTwo>(146,97,90)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MarketValue>4.6</MarketValue>
+            <StuffPower_Armor_Sharp>0.24</StuffPower_Armor_Sharp>
+            <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+        </statBases>
+        <stuffProps>
+            <color>(239,239,239)</color>
+            <commonality>0.0025</commonality>
+        </stuffProps>
+    </ThingDef>
+
+</Defs>

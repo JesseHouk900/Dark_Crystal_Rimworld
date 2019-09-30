@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="MealRottable">
+        <defName>JJH_CritterMeal</defName>
+        <label>Critter meal</label>
+        <description>Thrown together plate of critters from the forest, filling to some, gross to others</description>
+        <graphicData>
+            <texPath>Things/Item/Meal/Simple</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <DeteriorationRate>10</DeteriorationRate>
+            <MarketValue>10</MarketValue>
+            <WorkToMake>400</WorkToMake>
+            <Nutrition>0.85</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+           <!-- <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>JJH_HadCritterMeal</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+            -->
+        </ingestible>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RulePackDef>
+        <defName>JJH_GelflingMaleNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[pack]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>pack</keyword>
+                    <path>NameBanks/Names_GelflingMale</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+    
+    <RulePackDef>
+        <defName>JJH_GelflingFemaleNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[pack]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>pack</keyword>
+                    <path>NameBanks/Names_GelflingFemale</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>JJH_GelflingMaudraNamer</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[pack]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>pack</keyword>
+                    <path>NameBanks/Names_GelflingMaudra</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>JJH_NamerFactionBaseGelflingResistance</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[pack]</li>
+            </rulesStrings>
+            <rulesRaw>
+                <li Class="Rule_File">
+                    <keyword>pack</keyword>
+                    <path>NameBanks/Names_GelflingMaudra</path>
+                </li>
+            </rulesRaw>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

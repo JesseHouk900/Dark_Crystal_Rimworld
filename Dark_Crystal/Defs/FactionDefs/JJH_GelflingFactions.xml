@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <FactionDef>
+        <defName>JJH_GelflingFactionUnified</defName>
+        <label>Unified Gelfling Resistance</label>
+        <description>After their rally against the Skeksis, all Gelfling banded together to form a more sturdy community. Mixed with Maudra and maudren of all clans, the Unity is a diverse clan well prepared for battle and favorable in trade.</description>
+        <pawnsPlural>Gelfling</pawnsPlural>
+        <settlementGenerationWeight>0.15</settlementGenerationWeight>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>true</canSiege>
+        <!--<canSiegeAttacks>true</canSiegeAttacks>-->
+        <leaderTitle>allmaudra</leaderTitle>
+        <!--NEED IMAGE-->
+        <!--<expandingIconTexture>World/UnifiedGelfling</expandingIconTexture>-->
+
+
+        <startingGoodwill>
+            <min>-10</min>
+            <max>60</max>
+        </startingGoodwill>
+        <fixedName>Unified Gelfling Resistance</fixedName>
+        <!--May need additional funcionaliy-->
+        <settlementNameMaker>JJH_NamerFactionBaseGelflingResistance</settlementNameMaker>
+        <techLevel>Neolithic</techLevel>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <geneticVariance>0.95</geneticVariance>
+        <hairTags>
+            <li>Rural</li>
+        </hairTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Leather_Bluefur</li>
+                <li>WoolMegasloth</li>
+            </thingDefs>
+        </apparelStuffFilter>
+        <naturalColonyGoodwill>
+            <min>0</min>
+            <max>0</max>
+        </naturalColonyGoodwill>
+        <caravanTraderKinds>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+            <li>Caravan_Outlander_PirateMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>
+            <min>-50</min>
+            <max>50</max>
+        </allowedArrivalTemperatureRange>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0, 35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <!--PawnKinds-->
+                    <JJH_GelflingKindVillager>300</JJH_GelflingKindVillager>
+                    <!--<JJH_GelflingKindGuard>200</JJH_GelflingKindGuard>-->
+                </options>
+            </li>
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <!--PawnKinds-->
+                    <JJH_GelflingKindVillager>100</JJH_GelflingKindVillager>
+                    <!--<JJH_GelflingKindGuard>400</JJH_GelflingKindGuard>
+                    <JJH_GelflingKindAllMaudra>1</JJH_GelflingKindAllMaudra>-->
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <JJH_GelflingKindVillager>2</JJH_GelflingKindVillager>
+                    <!--<JJH_GelflingKindTrader>2</JJH_GelflingKindTrader>-->
+                </traders>
+                <carriers>
+                    <Muffalo>4</Muffalo>
+                    <Alpaca>3</Alpaca>
+                </carriers>
+                <guards>
+                    <JJH_GelflingKindVillager>200</JJH_GelflingKindVillager>
+                    <!--<JJH_GelflingKindGuard>200</JJH_GelflingKindGuard>-->
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <!--PawnKinds-->
+                    <JJH_GelflingKindVillager>300</JJH_GelflingKindVillager>
+                    <!--<JJH_GelflingKindGuard>200</JJH_GelflingKindGuard>
+                    <JJH_GelflingKindAllMaudra>50</JJH_GelflingKindAllMaudra>-->
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+
+
+    </FactionDef>
+
+</Defs>

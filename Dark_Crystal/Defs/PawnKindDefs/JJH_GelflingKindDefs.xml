@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>JJH_GelflingKindColonist</defName>
+        <race>JJH_GelflingStandardRace</race>
+        <label>gelfling</label>
+        <defaultFactionType>PlayerColony</defaultFactionType>
+        <!--Create a list of backstories for a type of gelfling-->
+        <backstoryCategories>
+            <li>JJH_BackstoryGelfling</li>
+            
+        </backstoryCategories>
+        
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>0</min>
+            <max>1500</max>
+        </apparelMoney>
+        <!--<backstoryCryptosleepComonality>1</backstoryCryptosleepComonality>-->
+
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>JJH_GelflingKindVillager</defName>
+        <race>JJH_GelflingStandardRace</race>
+        <label>gelfling-villager</label>
+        <defaultFactionType>JJH_GelflingFactionUnified</defaultFactionType>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <combatPower>24</combatPower>
+        <itemQuality>Poor</itemQuality>
+        <isFighter>false</isFighter>
+        <gearHealthRange>
+            <min>0.2</min>
+            <max>28</max>
+        </gearHealthRange>
+        <apparelTags>
+            <li>Neolithic</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>0</min>
+            <max>500</max>
+        </apparelMoney>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <weaponMoney>
+            <min>50</min>
+            <max>120</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <techHediffsMoney>
+            <min>100</min>
+            <max>220</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <techHediffsChance>0.05</techHediffsChance>
+        <invNutrition>1.2</invNutrition>
+        <inventoryOptions>
+            <skipChance>0.84</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>EggOstrichFertilized</thingDef>
+                    <countRange>
+                        <min>12</min>
+                        <max>26</max>
+                    </countRange>
+                </li>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>MealSimple</thingDef>
+                    <countRange>
+                        <min>2</min>
+                        <max>6</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+
+
+    <!--<PawnKindDef ParentName="BasePlayerPawnKind" >
+        <defName>JJH_GelflingKindGuard</defName>
+        <label>gelfling-guard</label>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <combatPower>100</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <isFighter>true</isFighter>
+        <gearHealthRange>
+            <min>0.2</min>
+            <max>28</max>
+        </gearHealthRange>
+        <apparelTags>
+            <li>Neolithic</li>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>200</min>
+            <max>8000</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>500</min>
+            <max>3200</max>
+        </weaponMoney>
+        <invNutrition>3.4</invNutrition>-->
+        <!--<inventoryOptions>
+            <skipChance>0.84</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>EggOstrichFertilized</thingDef>
+                    <countRange>
+                        <min>12</min>
+                        <max>26</max>
+                    </countRange>
+                </li>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>MealSimple</thingDef>
+                    <countRange>
+                        <min>2</min>
+                        <max>6</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>-->
+    <!--</PawnKindDef>-->
+
+    <!--<PawnKindDef ParentName="BasePlayerPawnKind" >
+        <defName>JJH_GelflingKindAllMaudra</defName>
+        <label>gelfling-allmaudra</label>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <combatPower>110</combatPower>
+        <itemQuality>Good</itemQuality>
+        <isFighter>true</isFighter>
+        <gearHealthRange>
+            <min>10</min>
+            <max>50</max>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>1500</min>
+            <max>3000</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>200</min>
+            <max>2000</max>
+        </weaponMoney>
+        <invNutrition>7.5</invNutrition>-->
+        <!--<inventoryOptions>
+            <skipChance>0.84</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>EggOstrichFertilized</thingDef>
+                    <countRange>
+                        <min>12</min>
+                        <max>26</max>
+                    </countRange>
+                </li>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>MealSimple</thingDef>
+                    <countRange>
+                        <min>2</min>
+                        <max>6</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>-->
+    <!--</PawnKindDef>-->
+
+    <!--<PawnKindDef ParentName="BasePlayerPawnKind" >
+        <defName>JJH_GelflingKindTrader</defName>
+        <label>gelfling-trader</label>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <itemQuality>Normal</itemQuality>
+        <apparelMoney>
+            <min>1000</min>
+            <max>3000</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>200</min>
+            <max>500</max>
+        </weaponMoney>
+        <invNutrition>3.2</invNutrition>
+        
+    </PawnKindDef>-->
+
+
+<!--Need JJH_* where * is:
+                           /
+        GelflingVillager \/
+
+                          /
+        GelflingGuard   \/
+        
+                             / 
+        GelflingAllMaudra  \/
+        
+                          /
+        GelflingTrader  \/ -->
+
+</Defs>

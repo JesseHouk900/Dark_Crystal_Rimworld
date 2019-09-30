@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <RecipeDef>
+        <!--JJH_Weapon_Bola
+        JJH_Apparel_VliyayaAtire-->
+        <defName>JJH_MakeCritterMeal</defName>
+        <label>Bake Gelfling critter plate</label>
+        <description>Plate of roasted insects, while not for everyone, is filling. \n\n Makes 1 plate</description>
+        <jobString>Making Critter meal</jobString>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <workAmount>650</workAmount>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <recipeUsers>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>Campfire</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>InsectJelly</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>InsectJelly</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <JJH_CritterMeal>1</JJH_CritterMeal>
+        </products>
+        <workSkill>Cooking</workSkill>
+        <!--<researchPrerequisite>JJH_Recipe</researchPrerequisite>-->
+
+    </RecipeDef>
+
+
+</Defs>

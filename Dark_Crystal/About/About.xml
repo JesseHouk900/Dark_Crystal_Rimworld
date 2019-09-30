@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+    <name> Dark Crystal - Gelfling</name>
+    <author>Jesse James Houk</author>
+    <supportedVersions>
+        <li>1.0</li>
+    </supportedVersions>
+    <description>V1.0
+        Dark Crystal - Gelfling
+    Basic mod for what will hopefully become a series of mods tributing Jim Henson's The Dark 
+    Crystal. So far it only contains a general race that is the Gelfling, but there are plans
+    for much more.
+    
+    Requires: erdelf Humanoid Alien Races 2.0 mod
+
+    Suggested: EdB Prepare Carefully mod
+
+    Known Probelms:
+        - Portrait image has misaligned ears
+        - Male Gelfling can be assigned with the Maudra/All Maudra backstory
+        - Can be more than 1 All Maudra
+
+    Future Plans:
+        - Animals: Landstriders, Nebries, Garthim, Arathim, Fizgig, Hollerbats, Muski
+        - Races: Gelfling clans, Skeksis, urRu (Mystiks), Grunak, Aughra, Podling, Lore
+        - Items: Healing plants, insect meals, Gelfling essense, Crystal Shard, Firca
+        - Events: restore the Crystal of Thra, Great Conjuncture, feast, Tithing
+        - Biomes: Spriton Plains, Dark Wood, Highlands?, Crystal Sea, Black River, Caves of Grot
+        - Misc: give girls wings, add Vliyaya (from J.M. Lee's books), 
+
+    This is my first mod and I do not know what I am doing most of the time, but it has been fun
+    so far. I would love to hear feedback on what is already here and maybe suggestions on 
+    how to fix the probelms mentioned above. I am doing this in my free time, so the updates 
+    may be slow, but I love the Dark Crystal and Rimworld, so they will surely happen.
+
+    I do not claim to be an expert on Dark Crystal lore, so please correct me if anything stands
+    out. 
+
+    Disclaimer: I hope to not have offended anyone as I modeled my code after some other
+    mods. I also do not own or claim anything about the Dark Crystal, it all belongs to the 
+    Jim Henson Company.
+    </description>
+</ModMetaData>

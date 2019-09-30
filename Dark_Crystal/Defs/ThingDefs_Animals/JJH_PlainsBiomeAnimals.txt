@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--See LotRE_MallornBiomeBeasts.xml-->
+
+<Defs>
+
+</Defs>

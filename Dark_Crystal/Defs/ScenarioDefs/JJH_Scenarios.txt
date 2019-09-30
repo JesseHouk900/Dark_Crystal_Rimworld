@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Define the player colony for the following scenarios-->
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>JJH_PlayerColony</defName>
+        <label>Gelfling Clan</label>
+        <description>Your own community</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>JJH_GelflingColonist</basicMemberKind>
+        <pawnsPlural>clan members</pawnsPlural>
+        <techLevel>Neolithic</techLevel>
+        <backstoryCategories><li>JJH_BackstoryGelfling</li></backstoryCategories>
+        <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <playerInitialSettlementNameMaker>NamerSettlementOutlander</playerInitialSettlementNameMaker>
+        <factionNameMaker>NamerSettlementOutlander</factionNameMaker>
+        <geneticVariance>0.75</geneticVariance>
+        <!--<startingResearchTags>
+            <li>ClassicStart</li>
+        </startingResearchTags>-->
+        <hairTags>
+            <li>Rural</li>
+        </hairTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Leather_Bluefur</li>
+            </thingDefs>
+        </apparelStuffFilter>
+        
+    </FactionDef>
+
+    <ScenarioDef>
+        <defName>JJH_AnotherTime</defName>
+        <label>Gelfling - Another time, another age</label>
+        <description>Long before the rise of the Skeksis or the Gelfling, a clan was settled, guided by Sister of Six. Yet undistinguished, the Gelfling forge a life of their own.</description>
+        <scenario>
+            <summary>Three Gelfling follow their wise leader, a Maudra, to the land that they will inhabit.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>JJH_PlayerColony</factionDef>
+            </playerFaction>
+            <parts>
+            
+                <!--Config Pages-->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+                    <def>ConfigPage_ConfigureStartingPawns</def>
+                    <pawnCount>4</pawnCount>
+                    <pawnChoiceCount>6</pawnChoiceCount>
+                </li>
+
+                <!--Player arrival method-->
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                    <visible>false</visible>
+                </li>
+                
+                <!--Starting Research-->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>ComplexClothing</project>
+                </li>
+                
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>ComplexFurniture</project>
+                </li>
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>Smithing</project>
+                </li>
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>LongBlades</project>
+                </li>
+
+                <!--Starting things-->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>ScenPart_StartingThing_Defined</def>
+                    <thingDef>MedicineHerbal</thingDef>
+                    <count>25</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>ScenPart_StartingThing_Defined</def>
+                    <thingDef>InsectJelly</thingDef>
+                    <count>300</count>
+                </li>
+                <li Class="ScenPart_StartingAnimal">
+                    <def>StartingAnimal</def>
+                    <count>3</count>
+                    <animalKind>Muffalo</animalKind>
+                    <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_LongSword</thingDef>
+                    <stuff>Plasteel</stuff>
+                </li>
+
+                <!--Scattered things-->
+                <li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Steel</thingDef>
+                    <count>350</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Uranium</thingDef>
+                    <count>200</count>
+                </li>
+                
+            </parts>
+        </scenario> 
+    </ScenarioDef>
+
+</Defs>

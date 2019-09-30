@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--Create a definition for each backstory-->
+    <AlienRace.BackstoryDef Name="JJH_BackstoryGelfling" Abstract="True">
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_BackstoryGelfling</li>
+        </spawnCategories>
+        <!--Body type specifically available to the backstory,
+        ones defined in race def are always available, these are extra-->
+        <bodyTypeGlobal>Thin</bodyTypeGlobal>
+        <!--<bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>-->
+
+        <!--Constrain backstory to an age limit -->
+        <bioAgeRange>
+            <min>0</min>
+            <max>120</max>
+        </bioAgeRange>
+        <chronoAgeRange>
+            <min>0</min>
+            <max>3000</max>
+        </chronoAgeRange>
+
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryClanMaudraChild</defName>
+        <title>Maudra child</title>
+        <titleShort>Maudren</titleShort>
+        <baseDescription>[PAWN_nameDef] was born to the leader of their clan</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Childhood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_ClanMaudraChild</li>
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Social</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <!--<li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>-->
+        </forcedTraits>
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <!--<maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>-->
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>100~200</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryEldestMaudraDaughter</defName>
+        <title>Maudra Protegie</title>
+        <titleShort>Maudra Protegie</titleShort>
+        <baseDescription>[PAWN_nameDef] is the eldest daughter to the leader of her clan</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Childhood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_ClanMaudraChild</li>
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Social</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>3</amount>
+            </li>
+            <li>
+                <defName>Melee</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <!--<li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>-->
+        </forcedTraits>
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <!--<maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>-->
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+        
+        <maleCommonality>0</maleCommonality>
+    	<femaleCommonality>5</femaleCommonality>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>100~1500</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+    
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryGelflingAllMaudra</defName>
+        <title>Gelfling All Maudra</title>
+        <titleShort>All Maudra</titleShort>
+        <baseDescription>[PAWN_nameDef] is the voice of the Gelfling, appointed by the Skeksis</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_ClanMaudraChild</li>
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Social</defName>
+                <amount>6</amount>
+            </li>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>8</amount>
+            </li>
+            <li>
+                <defName>Melee</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <!--<li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>-->
+        </forcedTraits>
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            <li>ManualDumb</li>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <!--<maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>-->
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <maleCommonality>0</maleCommonality>
+    	<femaleCommonality>1</femaleCommonality>
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>1500~3500</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryFarmerChild</defName>
+        <title>Farmer's Child</title>
+        <titleShort>Farmer's Child</titleShort>
+        <baseDescription>[PAWN_nameDef] was born to a farmer who sold to a nearby clan</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Childhood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_GelflingKindVillager</li>
+            <!--<li>JJH_GelflingKindGuard</li>
+            <li>JJH_GelflingKindTrader</li>-->
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Plants</defName>
+                <amount>3</amount>
+            </li>
+            <li>
+                <defName>Animals</defName>
+                <amount>2</amount>
+            </li>
+        </skillGains>
+
+        <!--<forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>
+        </forcedTraits>-->
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <!--<workDisables>
+            <li>ManualDumb</li>
+        </workDisables>-->
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <MealSimple>10~15</MealSimple>
+        </forcedItems>
+
+
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryWarriorChild</defName>
+        <title>Warrior's Child</title>
+        <titleShort>Warrior's Child</titleShort>
+        <baseDescription>[PAWN_nameDef] was born to a Gelfling that protects others.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Childhood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_GelflingKindVillager</li>
+            <!--<li>JJH_GelflingKindGuard</li>
+            <li>JJH_GelflingKindTrader</li>-->
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Melee</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Shooting</defName>
+                <amount>2</amount>
+            </li>
+        </skillGains>
+
+        <forcedTraits>
+            <!--<li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>-->
+        </forcedTraits>
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <maleCommonality>15</maleCommonality>
+        <femaleCommonality>15</femaleCommonality>
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <MeleeWeapon_LongSword>0~1</MeleeWeapon_LongSword>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+<!--<li>JJH_FarmerChild</li>
+            <li>JJH_WarriorChild</li>
+            <li>JJH_CastleGuard</li>
+            <li>JJH_FreeSpirit</li>-->
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryGelflingGuard</defName>
+        <title>Guard of a Clan</title>
+        <titleShort>Gelfling Guard</titleShort>
+        <baseDescription>[PAWN_nameDef] guards their clan and trains prospective Gelfling.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Childhood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_GelflingKindVillager</li>
+            <!--<li>JJH_GelflingKindGuard</li>
+            <li>JJH_GelflingKindTrader</li>-->
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Melee</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Shooting</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <!--<forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>
+        </forcedTraits>-->
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <maleCommonality>20</maleCommonality>
+        <femaleCommonality>20</femaleCommonality>
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <MeleeWeapon_LongSword>1</MeleeWeapon_LongSword>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryFreeSpirit</defName>
+        <title>Free Spirit</title>
+        <titleShort>Free Spirit</titleShort>
+        <baseDescription>[PAWN_nameDef] is not one for clan life, so they have taken to exploring the world in which they inhabit.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_GelflingKindVillager</li>
+            <!--<li>JJH_GelflingKindGuard</li>
+            <li>JJH_GelflingKindTrader</li>-->
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Construction</defName>
+                <amount>2</amount>
+            </li>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <!--<forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>
+        </forcedTraits>-->
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+            <li>Violent</li>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <maleCommonality>10</maleCommonality>
+        <femaleCommonality>10</femaleCommonality>
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <MedicineHerbal>10~25</MedicineHerbal>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+    
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryClanMaudra</defName>
+        <title>Clan Maudra</title>
+        <titleShort>Maudra</titleShort>
+        <baseDescription>[PAWN_nameDef] ascended to lead her clan when her mother died and now monitors the activities of her maudren.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_ClanMaudraChild</li>
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Social</defName>
+                <amount>6</amount>
+            </li>
+        </skillGains>
+
+        <!--<forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>
+        </forcedTraits>-->
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <maleCommonality>0</maleCommonality>
+        <femaleCommonality>7.6</femaleCommonality>
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>100~2500</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+    
+    <AlienRace.BackstoryDef ParentName="JJH_BackstoryGelfling">
+        <defName>JJH_BackstoryGelflingTrader</defName>
+        <title>Wares Trader</title>
+        <titleShort>Gelfling Trader</titleShort>
+        <baseDescription>[PAWN_nameDef] sells wares from clans to passing Gelfling, allowing for a spread of culture.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_GelflingKindVillager</li>
+            <!--<li>JJH_GelflingKindGuard</li>
+            <li>JJH_GelflingKindTrader</li>-->
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Crafting</defName>
+                <amount>2</amount>
+            </li>
+            <li>
+                <defName>Social</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <!--<forcedTraits>
+            <li>
+                <defName>Beauty</defName>
+                <degree>2</degree>
+                <chance>75</chance>
+            </li>
+            <li>
+                <defName>Straight</defName>
+                <chance>50</chance>
+            </li>
+        </forcedTraits>-->
+
+        <disallowedTraits>
+            <!--<li>
+                <defName>Bad</defName>
+            </li>-->
+        </disallowedTraits>
+
+        <workDisables>
+        </workDisables>
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <!--<maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>-->
+
+        <!--Link childhood backstory to adulthood backstory -->
+        <!--<linkedBackstory>JJH_Maudra</linkedBackstory>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>2</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>2</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>1</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>3</relationChanceModifierParent>
+            <relationChanceModifierChild>4</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!-for relabeling relationship labels ->
+            <renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>1000~1500</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+
+</Defs>

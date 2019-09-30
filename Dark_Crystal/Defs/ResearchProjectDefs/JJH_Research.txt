@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ResearchTabDef>
+        <defName>JJH_GelfingTab</defName>
+        <label>Gelfling, Augrha's Favorite</label>
+    </ResearchTabDef>
+
+    <ResearchProjectDef Name="GelflingResearch" Abstract="True">
+        <techLevel>Neolithic</techLevel>
+        <tab>JJH_GelfingTab</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectTagDef>
+        <defName>JJH_GelflingScenario</defName>
+    </ResearchProjectTagDef>
+
+    <!--Column 1-->
+
+
+    <ResearchProjectDef ParentName="GelflingResearch">
+        <defName>JJH_WeaponsOne</defName>
+        <label>Bola</label>
+        <description>Unlock powerful ranged weapon that must be picked up to use again</description>
+        <baseCost>100</baseCost>
+        <tags>
+            <li>JJH_GelflingScenario</li>
+        </tags>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+
+    </ResearchProjectDef> 
+    
+    <!--<ResearchProjectDef ParentName="GelflingResearch">
+        <defName>JJH_WeaponsOne</defName>
+        <label>Heavy Bola</label>
+        <description>Unlock powerful ranged weapon that must be picked up to use again</description>
+        <baseCost>100</baseCost>
+        <prerequisites>
+            <li>JJH_WeaponsOne</li>
+        </prerequisites>
+        <researchViewX>0.75</researchViewX>
+        <researchViewY>0</researchViewY>
+
+    </ResearchProjectDef> -->
+
+    <ResearchProjectDef ParentName="GelflingResearch">
+        <defName>JJH_AttireSpecial</defName>
+        <label>Vliyaya Clothing</label>
+        <description>Unlock clothing allowing for usage of the blue fire within Gelfling, needs person with knowledge to benefit</description>
+        <baseCost>450</baseCost>
+        <tags>
+            <li>JJH_GelflingScenario</li>
+        </tags>
+        <researchViewX>0</researchViewX>
+        <researchViewY>1</researchViewY>
+
+    </ResearchProjectDef> 
+
+
+</Defs>
