@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<Defs>
+    
+    <AlienRace.BackstoryDef Name="JJH_BackstorySkeksis" Abstract="True">
+
+        <spawnCategories>
+            <li>JJH_BackstorySkeksis</li>
+        </spawnCategories>
+
+        <bioAgeRange>
+            <min>0</min>
+            <max>1350</min>
+        </bioAgeRange>
+        <chronoAgeRange>
+            <min>0</min>
+            <max>50000</max>
+        </chronoAgeRange>
+
+    </AlienRace.BackstoryDef>
+
+    <AlienRace.BackstoryDef ParentName="JJH_BackstorySkeksis">
+        <defName>JJH_BackstoryChamberlain</defName>
+        <title>Chamberlain</title>
+        <titleShort>Chamberlain</titleShort>
+        <baseDescription>[PAWN_nameDef] is the most trusted advisor of the Emperor. Though [PAWN_pronoun] may come in and out of favor, they will delecately fight their way back, no matter what it takes.</baseDescription>
+
+        <!--Determine if it is a childhood backstory or adulthood-->
+        <slot>Adulthood</slot>
+        <!--<slot>Adulthood</slot>-->
+
+        <!--Spawn categories must be ones from the PawnkindDef list of backstories -->
+        <spawnCategories>
+            <li>JJH_BackstorySkeksis</li>
+        </spawnCategories>
+
+        <!--Skill gains due to backstory -->
+        <skillGains>
+            <li>
+                <defName>Social</defName>
+                <amount>4</amount>
+            </li>
+            <li>
+                <defName>Intellectual</defName>
+                <amount>3</amount>
+            </li>
+        </skillGains>
+
+        <forcedTraits>
+            <li>
+                <defName>Jealous</defName>
+                <chance>90</chance>
+            </li>
+            <li>
+                <defName>PsychicSensitivity</defName>
+                <degree>1</degree>
+                <chance>90</chance>
+            </li>
+        </forcedTraits>
+
+        <disallowedTraits>
+            <li>
+                <defName>Tough</defName>
+            </li>
+        </disallowedTraits>
+
+        <!--<workDisables>
+            <li>ManualDumb</li>
+        </workDisables>-->
+        <!--If work allowed is less than work disallowed, use below -->
+        <!--<workAllows>
+            <li>Animals</li>
+        </workAllows-->
+
+
+        <!--Percentage chance of backstories per gender-->
+        <!--<maleCommonality>50</maleCommonality>
+        <femaleCommonality>50</femaleCommonality>-->
+
+        <!--Can add relation settings specific to backstory-->
+        <relationSettings>
+            <!--Multiplier chances for the occurance of some type of relation -->
+            <relationChanceModifierLover>0.5</relationChanceModifierLover>
+            <relationChanceModifierExLover>2</relationChanceModifierExLover>
+
+            <relationChanceModifierFiance>1</relationChanceModifierFiance>
+            <relationChanceModifierSpouce>1</relationChanceModifierSpouce>
+            <relationChanceModifierExSpouce>2</relationChanceModifierExSpouce>
+
+            <relationChanceModifierParent>0.25</relationChanceModifierParent>
+            <relationChanceModifierChild>0.25</relationChanceModifierChild>
+            <relationChanceModifierSibling>4</relationChanceModifierSibling>
+
+            <!--for relabeling relationship labels -->
+            <!--<renamer>
+                <li>
+                    <relation>Parent</relation>
+                    <label>Father</label>
+                    <femaleLabel>Maudra</femaleLabel>
+                </li>
+                <li>
+                    <relation>Child</relation>
+                    <label>Maudren</label>
+                    <femaleLabel>Maudren</femaleLabel>
+                </li>
+            </renamer>-->
+
+        </relationSettings>
+
+        <forcedHediffs>
+            <!--<li>hediffName</li>-->
+        </forcedHediffs>
+
+        <!--force items into inventory due to backstory-->
+        <forcedItems>
+            <Silver>100~200</Silver>
+        </forcedItems>
+
+    </AlienRace.BackstoryDef>
+</Defs>

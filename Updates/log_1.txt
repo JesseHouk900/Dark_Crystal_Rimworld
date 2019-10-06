@@ -1,0 +1,14 @@
+Untested
+Gelfling-
+	added in relation settings
+	
+Items-
+	added bolas
+
+Skeksis-
+	added, trying masks
+	included SkekSil head (without different south version)
+
+Animals-
+	added Landstrider (not in Rimworld style)
+

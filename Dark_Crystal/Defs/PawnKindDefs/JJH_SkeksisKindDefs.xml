@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <PawnKindDef ParentName="BasePlayerPawnKind">
+        <defName>JJH_SkeksisKindLord</defName>
+        <label>skeksis</label>
+        <race>JJH_SkeksisStandardRace</race>
+        <defaultFactionType>PlayerColony</defaultFactionType>
+        <backstoryCategories>
+            <li>JJH_BackstorySkeksis</li>
+        </backstoryCategories>
+
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+
+        <apparelMoney>
+            <min>2300</min>
+            <max>4000</max>
+        </apparelMoney>
+
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="OutlanderBase" Name="JJH_SkeksisKindHeratic">
+        <defName>JJH_SkeksisKindHeratic</defName>
+        <label>heratic</label>
+        <race>JJH_SkeksisStandardRace</race>
+        <backstoryCategories>
+            <li>JJH_BackstorySkeksis</li>
+        </backstoryCategories>
+        <combatPower>25</combatPower>
+        <itemQuality>Normal</itemQuality>
+        <isFighter>false</isFighter>
+        <gearHealthRange>
+            <min>0.1</min>
+            <max>1.2</min>
+        </gearHealthRange>
+        <apparelMoney>
+            <min>200</min>
+            <max>1000</max>
+        </apparelMoney>
+
+        <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+        <weaponMoney>
+            <min>100</min>
+            <max>1200</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+            <li>MedievalMeleeBasic</li>
+            <li>MedievalMeleeDecent</li>
+        </weaponTags>
+        <techHediffsMoney>
+            <min>100</min>
+            <max>2200</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Simple</li>
+        </techHediffsTags>
+        <techHediffsChance>0.1</techHediffsChance>
+        <invNutrition>3.2</invNutrition>
+        <inventoryOptions>
+            <skipChance>0.84</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>EggOstrichFertilized</thingDef>
+                    <countRange>
+                        <min>12</min>
+                        <max>26</max>
+                    </countRange>
+                </li>
+                <li>
+                    <choiceChance>50</choiceChance>
+                    <thingDef>MealSimple</thingDef>
+                    <countRange>
+                        <min>2</min>
+                        <max>6</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+    
+</Defs>

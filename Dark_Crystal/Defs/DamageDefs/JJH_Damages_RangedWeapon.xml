@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <DamageDef Name="BluntBase">
+        <defName>JJH_Bola_Ensnare</defName>
+        <label>ensnare</label>
+        <workerClass>DamageWorker_Blunt</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} fell on their face and died.</deathMessage>
+        <hediff>Crush</hediff>
+        <hediffSkin>Bruise</hediffSkin>
+        <hediffSolid>Crack</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Blunt</armorCategory>
+        <overkillPctToDestroyPart>0.1~0.5</overkillPctToDestroyPart>
+        <buildingDamageFactor>0.8</buildingDamageFactor>
+        <bluntStunDuration>3.0</bluntStunDuration>
+        <bluntInnerHitChance>0.2</bluntInnerHitChance>
+        <bluntInnerHitDamageFractionToConvert>
+            <min>0.1</min>
+            <max>0.2</max>
+        </bluntInnerHitDamageFractionToConvert>
+        <bluntInnerHitDamageFractionToAdd>
+            <min>0.1</min>
+            <max>0.25</max>
+        </bluntInnerHitDamageFractionToAdd>
+        <bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+            <points>
+                <li>(0.04, 0.50)</li>
+                <li>(0.5, 1)</li>
+            </points>
+        </bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+        <bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+            <points>
+                <li>(0.04, 0.75)</li>
+                <li>(0.5, 1)</li>
+            </points>
+        </bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+        <isRanged>true</isRanged>
+    </DamageDef>
+</Defs>

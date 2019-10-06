@@ -1,14 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/*
+ *      Gelfling Bola
+ * Created by Jesse Houk 
+ * User: jessejhacker
+ * Date: 09/09/2019
+ * Time: 11:32 PM
+ * 
+ */
+/*
+ *      Gelfling
+ * Created by Jesse Houk 
+ * User: jessejhacker
+ * Date: 09/06/2019
+ * Time: 8:38 PM
+ * 
+ */
+using System;
 using RimWorld;
 using Verse;
 
 namespace DarkCrystal_Gelfling
 {
-    public class Projectile_Bola: Bullet
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Projectile_Bola : Bullet
     {
+
         #region Properties
         public ThingDef_Bola Def
         {
@@ -18,7 +35,6 @@ namespace DarkCrystal_Gelfling
             }
         }
         #endregion Properties
-
 
         #region Overrides
         protected override void Impact(Thing hitThing)
@@ -50,11 +66,18 @@ namespace DarkCrystal_Gelfling
                     }
                     else
                     {
-                        // mote maker handles all small visual effects
-                        MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(),
-                     hitThing.MapHeld, "JJH_Bola_FailureMote".Translate(Def.AddHediffChance), 12f);
+                        Hediff hediff = HediffMaker.MakeHediff(Def.HediffToAdd, hitPawn);
+                        hediff.Severity = randomSeverity;
+                        hitPawn.health.AddHediff(hediff);
 
                     }
+                }
+                else
+                {
+                    // mote maker handles all small visual effects
+                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(),
+                 hitThing.MapHeld, "JJH_Bola_FailureMote".Translate(Def.AddHediffChance), 12f);
+
                 }
             }
             #endregion Overrides

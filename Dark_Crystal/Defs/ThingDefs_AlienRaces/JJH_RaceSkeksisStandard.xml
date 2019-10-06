@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+
+        <defName>JJH_SkeksisStandardRace</defName>
+
+        <label>Skeksis</label>
+
+        <description>Deceptive and cruel, Skeksis are only half of something that once was, yet not many seek to reconveine as they once were.</description>
+
+        <alienRace>
+            <generalSettings>
+
+                <maleGenderProbability>0.94</maleGenderProbability>
+
+                <immuneToAge>false</immuneToAge>
+
+                <canLayDown>true</canLayDown>
+
+                <disallowedTraits>
+                    <li>Sanguine</li>
+                    <li>Kind</li>
+                </disallowedTraits>
+
+                <maxDamageForSocialfight>0.5</maxDamageForSocialfight>
+
+                <allowHumanBios>false</allowHumanBios>
+
+                <immuneToXenophobia>false</immuneToXenophobia>
+
+                <humanRecipeImport>true</humanRecipeImport>
+
+                <alienPartGenerator>
+
+                    <aliencrowntypes>
+                        <li>SkekSil</li> <!--Chamberlain-->
+                        <!--<li>SkekSo</li>--> <!--Emperor-->
+                        <!--<li>SkekTek</li>--> <!--Scientist-->
+                        <!--<li>SkekZok</li>--> <!--Ritual master-->
+                        <!--<li>SkekMal</li>--> <!--Hunter-->
+                    </aliencrowntypes>
+
+                    <alienbodytypes>
+                        <li>Thin</li>
+                        <li>Hulk</li>
+                        <li>Fat</li>
+                    </alienbodytypes>
+
+                    <useGenderedHeads>false</useGenderedHeads>
+                    <useGenderedBodies>false</useGenderedBodies>
+
+                    <alienskincolorgen Class="ColorGenerator_Options">
+                        <options>
+                            <!-- SkekSil -->
+                            <li>
+                                <weight>5<weight>
+                                <only>RGBA(0.055, 0.243, 0.471, 1)</only> 
+                            </li>
+                            <!-- SkekTek -->
+                            <li>
+                                <weight>5<weight>
+                                <only>RGBA(0.255, 0.42, 0.671, 1)</only> 
+                            </li>
+                        </options>
+                    </alienskincolorgen>
+
+                    <alienhaircolorgen Class="ColorGenerator_Options">
+                        <!-- SkekSo -->
+                        <li>
+                            <weight>5</weight>
+                            <only>RGBA(0.322, 0.306, 0.282, 1)</only>
+                        </li>
+                        <!-- SkekZok -->
+                        <li>
+                            <weight>5</weight>
+                            <only>RGBA(0.729, 0.639, 0.502, 1)</only>
+                        </li>
+                    </alienhaircolorgen>
+
+                    <useSkincolorForHair>false</useSkincolorForHair>
+
+                    <customDrawSize>(2.296, 1.75)</customDrawSize>
+                    <customHeadDrawSize>(2.296, 1.75)</customHeadDrawSize>
+                    <customPortraitDrawSize>(1.5, 1.15)</customPortraitDrawSize>
+                    <customPortraitHeadDrawSize>(1.5, 1.15)</customPortraitHeadDrawSize>
+
+                    <!--<headOffset>(0.00, 0.00)</headOffset>-->
+
+                    <!--bodyAddons-->
+                </alienPartGenerator>
+
+                
+            </generalSettings>
+
+            <graphicPaths>
+                <li>
+                    <head>Things/Pawns/Heads/Skeksis/</head>
+                    <body>Things/Pawns/Body/Skeksis/</body>
+                    <!--Things/Pawns/Dessicated/Skull/Skeksis/-->
+                    <!--Things/Pawns/Dessicated/Body/Skeksis/-->
+                </li>
+            </graphicPaths>
+
+            <hairSettings>
+                <hasHair>true</hasHair>
+                <getsGreyAt>980</getsGreyAt>
+
+                <hairTags>
+                    <!--<li>ManyPonys</li>
+                    <li>ForwardHorn</li>
+                    <li>BackwardHorn</li>
+                    <li>TopPony</li>
+                    <li>Stripe</li>
+                    <li>Scraggly</li>-->
+                    <li>Shaved</li>
+                    
+                </hairTags>
+
+                <shader>CutoutComplex</shader>
+            </hairSettings>
+
+            <thoughtSettings>
+
+                <!--thoughts found in Rimworld/Mods/Core/Defs/ThoughtDefs-->
+                <cannotReceiveThoughts>
+                    <li>KnowGuestExecuted</li>
+                    <li>KnowColonistExecuted</li>
+                    <li>KnowPrisonerDiedInnocent</li>
+                    <li>AteCorpse</li>
+                    <li>AteHumanlikeMeatDirect</li>
+                    <li>AteHumanlikeMeatAsIngredient</li>
+                    <li>AteRottenFood</li>
+                    <li>KnowPrisonerSold</li>
+                    <li>KnowGuestOrganHarvested</li>
+                    <li>KnowColonistOrganHarvested</li>
+                    <li>Nuzzled</li>
+                    <li>KnowButcheredHumanlikeCorpse</li>
+                    <li>WitnessedDeathNonAlly</li>
+                    <li>ColonistBanished</li>
+                    <li>ColonistBanishedToDie</li>
+                    <li>PrisonerBanishedToDie</li>
+                    <li>FailedToRescueRelative</li>
+                    <li>RebuffedMyRomanceAttempt</li>
+                    <li>FailedRomanceAttemptOnMe</li>
+                    <li>HumanLeatherApparelSad</li>
+                    <li>AteRawHumanlikeMeat</li>
+                    <li>SoldPrisoner</li>
+                    <li>ExecutedPrisoner</li>
+                    <li>KilledColonist</li>
+                    <li>Ascetic</li>
+                </cannotReceiveThoughts>
+
+
+            </thoughtSettings>
+
+            <relationSettings>
+
+            </relationSettings>
+
+            <raceRestriction>
+                <apparelList>
+                    <li>JJH_Apparel_Skeksis</li>
+                </apparelList>
+
+                <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+                <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+
+
+            </raceRestriction>
+            
+
+        </alienRace>
+
+        <statBases>
+            <MarketValue>3500</MarketValue>
+            <moveSpeed>3.2</moveSpeed>
+            <Flammability>1.0</Flammability>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <ToxicSensitivity>0.5</ToxicSensitivity>
+            <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+            <LeatherAmount>30</LeatherAmount>
+            <Mass>105</Mass>
+        </statBases>
+
+        <tools>
+            <li>
+                <label>right fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>1.5</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>30</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>left fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>1.5</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>30</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>teeth</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>1.5</cooldownTime>
+                <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                <chanceFactor>0.75</chanceFactor>
+            </li>
+        </tools>
+
+        <race>
+
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>
+            <makesFootprints>true</makesFootprints>
+            <lifeExpectancy>1200</lifeExpectancy>
+            <baseHungerRate>0.5</baseHungerRate>
+            <leatherDef>Leather_JJHSkeksis</leatherDef>
+            <nameCategory>HumanStandard</nameCategory>
+            <body>Human</body>
+            <baseBodySize>2.296</baseBodySize>
+            <baseHealthScale>0.9</baseHealthScale>
+            <foodType>OmnivoreHuman</foodType>
+            <gestationPeriodDays>120</gestationPeriodDays>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.5, 0)</li>
+                    <li>(1, 0.05)</li>
+                    <li>(2, 1)</li>
+                    <li>(3.5, 0)</li>
+                </points>
+            </litterSizeCurve>
+
+            <lifeStageAges>
+                <li>
+                    <def>HumanlikeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeToddler</def>
+                    <minAge>1.2</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeChild</def>
+                    <minAge>4</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeTeenager</def>
+                    <minAge>13</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeAdult</def>
+                    <minAge>112</minAge>
+                </li>
+            </lifeStageAges>
+
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			
+            <specialShadowData>
+                <volume>(1, 1.3, 0.4)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </specialShadowData>
+
+            <ageGenerationCurve>
+                <points>
+                    <li>(50, 0)</li>
+                    <li>(100, 3)</li>
+                    <li>(250, 8)</li>
+                    <li>(500, 18)</li>
+                    <li>(750, 75)</li>
+                    <li>(1000, 100)</li>
+                    <li>(1250, 30)</li>
+                    <li>(1500, 0)</li>
+                </points>
+            </ageGenerationCurve>
+            
+            <hediffGiverSets>
+                <li>OrganicStandard</li>
+                <li>Human</li>
+            </hediffGiverSets>
+        </race>
+        
+    </AlienRace.ThingDef_AlienRace>
+
+    <AlienRace.RaceSettings>
+        <defName>SkeksisSettings</defName>
+
+        <pawnKindSettings>
+            <alienslavekinds>
+            </alienslavekinds>
+
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+                        <li>JJH_SkeksisKindHeratic</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+                </li>
+            </alienrefugeekinds>
+
+            <startingColonists>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>JJH_SkeksisKindLord</li>  
+                            </kindDefs>
+                        </li>
+                    </pawnKindEntries>
+                </li>
+            </startingColonists>
+
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>JJH_SkeksisKindHeratic</li>
+                            </kindDefs>
+                            <chance>10.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>PlayerColony</li>
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+        </pawnKindSettings>
+    </AlienRace.RaceSettings>
+
+    <ThingDef ParentName="LeatherBase">
+        <defName>Leather_JJHSkeksis</defName>
+        <label>skeksis leather</label>
+        <description>Dried hide of Skeksis, obtained by usual methods (don't tell that to anyone). What a waste of a perfectly good corpse, would've made a better sculpture.</description>
+        <graphicData>
+            <color>(118, 115, 119)</color>
+            <colorTwo>(82, 72, 71)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MarketValue>20.5</MarketValue>
+            <StuffPower_Armor_Sharp>0.2</StuffPower_Armor_Sharp>
+            <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>14</StuffPower_Insulation_Heat>
+        </statBases>
+        <stuffProps>
+            <color>(239,239,239)</color>
+            <commonality>0.0025</commonality>
+        </stuffProps>
+    </ThingDef>
+    
+</Defs>

@@ -88,7 +88,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -99,7 +99,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -111,7 +111,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -194,7 +194,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -205,7 +205,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -217,7 +217,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
         
@@ -303,7 +303,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -314,7 +314,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -326,7 +326,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -410,7 +410,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -421,7 +421,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -433,7 +433,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -515,7 +515,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -526,7 +526,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -538,7 +538,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -623,7 +623,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -634,7 +634,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -646,7 +646,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -727,7 +727,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -738,7 +738,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -750,7 +750,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -829,7 +829,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -840,7 +840,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -852,7 +852,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 
@@ -932,7 +932,7 @@
         <!--Can add relation settings specific to backstory-->
         <relationSettings>
             <!--Multiplier chances for the occurance of some type of relation -->
-            <!--<relationChanceModifierLover>2</relationChanceModifierLover>
+            <relationChanceModifierLover>2</relationChanceModifierLover>
             <relationChanceModifierExLover>1</relationChanceModifierExLover>
 
             <relationChanceModifierFiance>2</relationChanceModifierFiance>
@@ -943,7 +943,7 @@
             <relationChanceModifierChild>4</relationChanceModifierChild>
             <relationChanceModifierSibling>4</relationChanceModifierSibling>
 
-            <!-for relabeling relationship labels ->
+            <!--for relabeling relationship labels -->
             <renamer>
                 <li>
                     <relation>Parent</relation>
@@ -955,7 +955,7 @@
                     <label>Maudren</label>
                     <femaleLabel>Maudren</femaleLabel>
                 </li>
-            </renamer>-->
+            </renamer>
 
         </relationSettings>
 

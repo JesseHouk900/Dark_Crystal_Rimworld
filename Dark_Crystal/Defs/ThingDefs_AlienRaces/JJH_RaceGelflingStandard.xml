@@ -335,7 +335,7 @@
                     <useSkincolorForHair>false</useSkincolorForHair>
 
                     <!--custom sizing for the body, default is (1,1) -->
-                    <customDrawSize>(0.6,0.6)</customDrawSize>
+                    <customDrawSize>(0.6,0.6)</customDrawSize> <!-- should be 0.73, test with new height-->
                     <!--custom sizing for the head, default is (1,1) -->
                     <customHeadDrawSize>(0.65,0.65)</customHeadDrawSize>
                     <!--custom sizing for the body portrait, default is (1,1) -->
@@ -521,7 +521,7 @@
                 and with "<head>TestPawn/head/</head>", will search for
                 "TestPawn/Head/" + gender + crownType + "_" + [south/east/north/west] -->
                 <li>
-                    <head>Things/Pawns/Heads/</head>
+                    <head>Things/Pawns/Heads/Gelfling/</head>
                 <!--
                     <body>GelflingPawn/Base/<body>
                     <skeleton>GelflingPawn/Dessicated/<skeleton>
@@ -982,8 +982,9 @@
                     <pawnKindEntries>
                         <li>
                             <kindDefs>
-                                <li>JJH_ClanMaudraChild</li>
-                                <li>JJH_BackstoryGelfling</li>
+                                <li>JJH_GelflingKindColonist</li>
+                                <!--<li>JJH_ClanMaudraChild</li>
+                                <li>JJH_BackstoryGelfling</li>-->
                             </kindDefs>
                         </li>
                     </pawnKindEntries>

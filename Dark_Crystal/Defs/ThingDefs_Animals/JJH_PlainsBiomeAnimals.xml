@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--See LotRE_MallornBiomeBeasts.xml-->
+
+<Defs>
+
+    <ThingDef ParentName="AnimalThingBase" Name="JJH_Landstrider">
+        <defName>JJH_Landstrider</defName>
+        <label>Landstrider</label>
+        <description>Large, fast, tamable creature that enjoy Gelfling and dispise Garthim</description>
+        <statBases>
+            <MoveSpeed>8.37</MoveSpeed>
+            <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+            <MarketValue>300</MarketValue>
+        </statBases>
+        <tools>
+            <li>
+                <label>left leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>17</power>
+                <cooldownTime>1.55</cooldownTime>
+                <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+                
+
+            </li>
+            <li>
+                <label>right leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>17</power>
+                <cooldownTime>1.55</cooldownTime>
+                <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>10.55</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <chanceFactor>0.02</chanceFactor>
+            </li>
+        </tools>
+
+        <race>
+            <body>QuadrupedAnimalWithHooves</body>
+            <herdAnimal>true</herdAnimal>
+            <baseBodySize>3.75</baseBodySize>
+            <baseHungerRate>2.9</baseHungerRate>
+            <baseHealthScale>3.2</baseHealthScale>
+            <predator>true</predator>
+            <maxPreyBodySize>1</maxPreyBodySize>
+            <foodType>VegetarianRoughAnimal, CarnivoreAnimal</foodType>
+            <leatherDef>Leather_Light</leatherDef>
+
+            <nameOnTameChance>1</nameOnTameChance>
+            <trainability>Advanced</trainability>
+            <meatLabel>landstrider meat</meatLabel>
+            <packAnimal>true</packAnimal>
+            <wildness>0.21</wildness>
+            <nuzzleMtbHours>130</nuzzleMtbHours>
+            <gestationPeriodDays>29.3</gestationPeriodDays>
+            <lifeExpectancy>110</lifeExpectancy>
+            <litterSizeCurve>
+                <points>
+                    <li>(0.5, 0)</li>
+                    <li>(1, 1)</li>
+                    <li>(2, 0.7)</li>
+                    <li>(3, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.25</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>1</minAge>
+                    <soundWounded>Pawn_Deer_Wounded</soundWounded>
+                    <soundDeath>Pawn_Deer_Death</soundDeath>
+                    <soundCall>Pawn_Deer_Call</soundCall>
+                    <soundAngry>Pawn_Deer_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+            <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+            <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+        </race>
+        <tradeTags>
+            <li>AnimalExotic</li>
+        </tradeTags>
+    </ThingDef>
+
+
+    <PawnKindDef ParentName="AnimalKindBase" name="JJH_LandstriderKind">
+        <defName>JJH_LandstriderKind</defName>
+        <label>Landstrider</label>
+        <labelPlural>Landstriders</labelPlural>
+        <race>JJH_Landstrider</race>
+        <combatPower>80</combatPower>
+
+        <!--Possibly the value used to determine how many animals should be in system-->
+        <ecoSystemWeight>0.2</ecoSystemWeight>
+        <wildGroupSize>
+            <min>1</min>
+            <max>5</max>
+        </wildGroupSize>
+        <labelMale>Male Landstrider</labelMale>
+        <labelFemale>Female Landstrider</labelFemale>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Landstrider</texPath>
+                    <drawSize>2</drawSize>
+                    <color>(224, 222, 168)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(0.5, 0.2, 0.2)</volume>
+                        <offset>(0, 0, -0.2)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Dessicated_Landstrider</texPath>
+                    <drawSize>2</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Landstrider</texPath>
+                    <drawSize>2.6</drawSize>
+                    <color>(188, 196, 159)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(0.75, 0.3, 0.3)</volume>
+                        <offset>(0, 0, -0.2)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Dessicated_Landstrider</texPath>
+                    <drawSize>2.6</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Landstrider</texPath>
+                    <drawSize>3.75</drawSize>
+                    <color>(156, 119, 92)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(1, 0.4, 0.4)</volume>
+                        <offset>(0, 0, -0.2)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Animals/Landstrider/Dessicated_Landstrider</texPath>
+                    <drawSize>3.75</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages> 
+    </PawnKindDef>
+</Defs>

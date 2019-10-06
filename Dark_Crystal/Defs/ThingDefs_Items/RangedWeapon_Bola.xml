@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+            Bola weapon for gelfling
+    Ranged: X damage        MaxStack: Y
+A reusable weapon that must be thrown from a distance.
+Made of rope tied into a Y with a rock tied at every end.
+
+Author: jessejhacker
+
+-->
+
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>JJH_Thrown_Bola</defName>
+        <label>thrown bola</label>
+        <graphicData>
+            <texPath>Things/Projectiles/Bola_Thrown</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <flyOverhead>false</flyOverhead>
+            <damageDef>JJH_Bola_Ensnare</damageDef>
+            <damageAmountBase>22</damageAmountBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>38</speed>
+        </projectile>
+
+        <!--Percentage chance to cause a debuff-->
+        <!--<AddHediffChance>0.05</AddHediffChance>
+        <HediffToAdd>Anesthetic</HediffToAdd>
+        <thingClass>DarkCrystal_Gelfling.Projectile_Bola</thingClass>-->
+
+
+    </ThingDef>
+  
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>JJH_Bola_DarkCrystal</defName>
+        <label>bola</label>
+        <description>A traditional weapon for gelfling, especially the Spriton, known for their range, and the Drenchen, specialized in packing a punch.</description>
+        <graphicData>
+            <texPath>Things/Item/Weapons/Bola_v2</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_BeatFire</soundInteract>
+        <statBases>
+            <WorkToMake>4000</WorkToMake>
+            <Mass>1.4</Mass>
+            <AccuracyTouch>0.95</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.7</AccuracyLong>
+            <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>NeolithicRangedDecent</li>
+            <li>NeolithicRangedHeavy</li>
+            </weaponTags>
+        <costList>
+            <WoodLog>5</WoodLog>
+            <ChunkMarble>2</ChunkMarble>
+        </costList>
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>JJH_Thrown_Bola</defaultProjectile>
+                <warmupTime>2.3</warmupTime>
+                <range>35.9</range>
+                <soundCast>Interact_BeatFire</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>left stone</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>right stone</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+  
+</Defs>
